@@ -23,6 +23,19 @@
     var arreglo = [1, 2, 3]
     var divs = document.querySelectorAll('div');
     var div = document.getElementById('uno');
+
+    divs.forEach(function(e) {
+      e.addEventListener('click', function(evento) {
+        console.log(evento)
+        console.log(evento.target)
+        if(evento.target.style.background == 'green') {
+          evento.target.style.background = 'plum'
+        }
+        else {
+          evento.target.style.background = 'green'
+        }
+      })
+    })
     // divs.forEach(function(e) {
     //   e.addEventListener('click', function(evento) {
     //     if( evento.target.style.background == 'gray none repeat scroll 0% 0%') {
