@@ -1,1 +1,26 @@
 // Mixins acá
+.flex(@direction: row, @justify: center, @align: center){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.imgLala(@radius: 20px) {
+    border-radius: @radius;
+}
+//no estaría andando todo esto:
+.myBtn(@bg-color, @font-color){
+    background-color: @bg-color;
+    color: @font-color;
+    display: inline-block;
+    padding: 10px;
+    font-size: 15px;
+
+    &:hover {
+        background-color: @font-color;
+        color: @bg-color;
+    }
+}
+
+
