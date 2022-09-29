@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button class="all">Trae todos los pedidos</button>
+        <button class="pedidos">Consultar pedidos</button>
+        <input name="index" type="text"/>
+        <button class="pedido">Consultar pedido específico</button>
+    </div>
+​
+    <script>
+        $('.pedidos').click(() => {
+            $.get(`https://jsonplaceholder.typicode.com/posts`, function(data){
+                console.log(data)
+​
+                data.forEach(obj => $(`<div id=${obj.id}>
+                                        <p>UserID: ${obj.id}</p>
+                                        <p>
+                                            Title: ${obj.title}
+                                        </p>
+                                    </div>`).appendTo('body'))
+            })
+        })
+​
+​
+        $('.pedido').click(() => {
+            let input = $('input');
+            console.log(input)
+            console.log(input[0])
+            console.log(input[0].value)
+​
+            $.get(`https://jsonplaceholder.typicode.com/posts/${input[0].value}`, function(data){
+                
+                $(`<div id=${data.id}>
+                    <p>Id: ${data.id}</p>
+                    <p>Title: ${data.title}</p>
+                </div>`).appendTo('body')
+            })
+​
+            input[0].value = '';
+        })
+    </script>
+</body>
+</html>
