@@ -1,12 +1,13 @@
-(function () {
 
+  import {EventEmitter} from './event-emitter.js'
+  
   window.whiteboard = new window.EventEmitter();
 
   // Ultimately, the color of our stroke;
-  var color;
+ export var color;
 
   // The color selection elements on the DOM.
-  var colorElements = [].slice.call(document.querySelectorAll('.marker'));
+ export var colorElements = [].slice.call(document.querySelectorAll('.marker'));
 
   colorElements.forEach(function (el) {
 
@@ -25,11 +26,11 @@
 
   });
 
-  var canvas = document.getElementById('paint');
+ export var canvas = document.getElementById('paint');
 
-  var ctx = canvas.getContext('2d')
+ export var ctx = canvas.getContext('2d')
 
-  function resize() {
+ export function resize() {
     // Unscale the canvas (if it was previously scaled)
     ctx.setTransform(1, 0, 0, 1, 0, 0);
 
@@ -113,4 +114,4 @@
 
   };
 
-})();
+

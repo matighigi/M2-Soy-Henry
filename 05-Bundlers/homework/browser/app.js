@@ -1,4 +1,4 @@
-(function () {
+  import {color, colorElements, canvas, ctx, resize} from './whiteboard.js'
 
   var whiteboard = window.whiteboard;
   var socket = window.io(window.location.origin);
@@ -26,4 +26,4 @@
     socket.emit('draw', start, end, color);
   });
 
-})();
+
