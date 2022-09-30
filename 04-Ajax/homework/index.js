@@ -1,4 +1,5 @@
 $('#boton').click(() => {
+    $('#lista').empty()
     $.get('http://localhost:5000/amigos', function (data){
         console.log(data)
 
