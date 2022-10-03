@@ -7,15 +7,21 @@ import data, { Cairns } from './data.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <div>
-        <Card
+        <SearchBar
+          onSearch={(ciudad) => alert(ciudad)}
+        />
+      </div>
+      <div>
+    {/* al finalizar, comentamos esta linea de abajo para que no se repita la ciudad 'Cairns' */}
+        {/* <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
           name={Cairns.name}
           img={Cairns.weather[0].icon}
           onClose={() => alert(Cairns.name)}
-        />
+        /> */}
       </div>
       <hr />
       <div>
@@ -24,11 +30,7 @@ function App() {
         />
       </div>
       <hr />
-      <div>
-        <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
-        />
-      </div>
+     
     </div>
   );
 }
