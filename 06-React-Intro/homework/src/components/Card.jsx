@@ -13,7 +13,8 @@ export default function Card(props) {
               <p>Max</p>
               <p>{props.max}</p>
             </div>
-            <img src = {`http://openweathermap.org/img/wn/${props.img}@2x.png`}/>
+            <img src = {`http://openweathermap.org/img/wn/${props.img}@2x.png`}/> 
+          {/* prestar atencion a ${props.img} que con destructuring sería ${img} */}
           </div>
   )
 };
