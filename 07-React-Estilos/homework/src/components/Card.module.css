@@ -1,0 +1,66 @@
+.div {
+  background-color: rgb(199, 187, 172);
+  border: rgb(12, 12, 12) solid 3px;
+  border-radius: 10px;
+  display: inline-block;
+  /* este arma los bloques uno al lado del otro */
+  height: auto;
+  width: 25%;
+  margin-left: 2%;
+  margin-right: 2%;
+  position: relative;
+}
+
+
+.boton {
+   background-color: rgb(137, 135, 133); 
+   color: black;
+   border-radius: 15%;
+   position: absolute;
+   right: 1%;
+   top: 1%;
+   height: min-content;
+   width: min-content;
+   
+}
+
+.boton:hover {
+    background-color: crimson;
+}
+
+.titulo {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.maxmin {
+    text-decoration:underline;
+    font-size:larger;
+}
+
+.info {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1%;
+    height: 50%;
+    font-style: oblique;
+}
+
+.img {
+    background-color:  rgb(199, 187, 172);
+    border:rgb(39, 39, 39) solid 0,5px;
+    border-radius: 10%;
+    top: 0%;
+    height: auto;
+}
+
+.max {
+    color: red;
+}
+
+.min {
+    color: blue;
+}
+

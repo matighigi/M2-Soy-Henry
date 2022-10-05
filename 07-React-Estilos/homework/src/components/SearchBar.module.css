@@ -1,0 +1,10 @@
+.barra {
+    background-color: rgb(235, 235, 235);
+}
+.button {
+    background-color: rgb(235, 235, 235);
+}
+.container {  
+    position: relative;
+    left: 32%;
+}
