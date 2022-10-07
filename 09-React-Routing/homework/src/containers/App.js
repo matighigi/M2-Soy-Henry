@@ -51,20 +51,14 @@ function App() {
     <div className="App">
       <Nav onSearch={onSearch}/>
 
-      <Route 
-      exact path= '/'
-      render = {() => <Nav onSearch ={onSearch} />}
-      >
+      <Route exact path= '/'>
         <Cards
           cities={cities}
           onClose={onClose}
         />
       </Route>
 
-      <Route 
-      exact path='/about'
-      component= {About}
-      >
+      <Route exact path='/about'>
         <About />
       </Route>
       
