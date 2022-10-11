@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, IMPAR, ASYNC} from '../actions';
 
 const initialState = {
   count: 0
@@ -10,9 +10,26 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-    // completa para este caso
+      return ({
+        ...state,
+        count: state.count + 1
+      })
     case DECREMENT:
-    // Fill para este otro
+      return ({
+        ...state,
+        count: state.count - 1
+      })
+    // case IMPAR:
+    //   if(state.count % 2 !== 0) {
+    //     return ({
+    //       ...state,
+    //       count: state.count + 1
+    //     })
+    //   }
+    // case ASYNC:
+    //   return ({
+    //     count: state.count + 1
+    //   })
     default:
       return state;
   }
